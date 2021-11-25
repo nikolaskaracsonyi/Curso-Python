@@ -39,8 +39,7 @@ print(nao_existe)
 numero = 42
 
 if numero > 10:
-    novo = numero + 10 # A variável 'novo' está declarada localmente dentro do bloco do if. Portanto é local 
-    print(novo)
+    novo = numero + 10 # A variável 'novo' está declarada localmente
+    print(novo)        # dentro do bloco do if. Portanto é local
 
 print(novo)
-
