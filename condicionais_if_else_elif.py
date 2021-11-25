@@ -5,29 +5,25 @@ if, else, elif
 
 idade = 18
 
-"""
 # Estrutura condicial if, em C
-if(idade < 18){
-    printf('Menor de idade');
-}else if (idade == 18){
-    printf("Tem 18 anos");
-}else{
-    printf("É menor de idade");
-}
-"""
+#if(idade < 18){
+#    printf('Menor de idade');
+#}else if (idade == 18){
+#    printf("Tem 18 anos");
+#}else{
+#    printf("É menor de idade");
+#}
 
-"""
+
 # Estrutura condicional if, else em Java
 
-if(idade < 10){
-    System.out.println("Menor de idade");
-}else if(idade == 18){
-    System.out.println("Tem 18 anos")
-}else{
-    System.out.println("É menor de idade)
-}
-
-"""
+#if(idade < 10){
+#    System.out.println("Menor de idade");
+#}else if(idade == 18){
+#    System.out.println("Tem 18 anos")
+#}else{
+#    System.out.println("É menor de idade)
+#}
 
 if idade < 18:
     print('Menor de idade')
