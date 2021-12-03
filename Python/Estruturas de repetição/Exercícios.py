@@ -30,7 +30,3 @@ while numero < 101000:
     numero = numero + 1000
 
 """
-
-
-
-
