@@ -30,7 +30,13 @@ lista4 = list(range(11))
 lista5 = list('Geek University')
 
 # Podemos facilmente checar se determinado valor está contido na lista
-if 8 in lista4:
-    print('Encontrei o número 8')
+num = 7
+
+if num in lista4:
+    print(f'Encontrei o número {num}')
 else:
-    print('Não encontrei o número 8')
+    print(f'Não encontrei o número {num}')
+
+# Podemos facilmente ordenar uma lista
+lista1.sort()
+print(lista1)
