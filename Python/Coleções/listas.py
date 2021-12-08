@@ -15,6 +15,19 @@ Python
 
 As listas em Python são representadas por colchetes : []
 
+print(type([]))
+
+lista1 = [1, 99, 4, 27, 15, 22, 3, 1, 44, 42, 27]
+
+lista2 = ['G', 'e', 'e', 'k', ' ', 'U', 'n',
+          'i', 'v', 'e', 'r', 's', 'i', 't', 'y']
+
+lista3 = []
+
+lista4 = list(range(11))
+
+lista5 = list('Geek University')
+
 # Podemos facilmente checar se determinado valor está contido na lista
 num = 7
 if num in lista4:
@@ -137,22 +150,124 @@ print(curso)
 # Abaixo estamos falando: Pega a lista6 e coloca um "$" entre cada elemento e transforma em uma string
 curso = '$'.join(lista6)
 print(curso)
-"""
-
-print(type([]))
-
-lista1 = [1, 99, 4, 27, 15, 22, 3, 1, 44, 42, 27]
-
-lista2 = ['G', 'e', 'e', 'k', ' ', 'U', 'n',
-          'i', 'v', 'e', 'r', 's', 'i', 't', 'y']
-
-lista3 = []
-
-lista4 = list(range(11))
-
-lista5 = list('Geek University')
 
 # Podemos realmente colocar qualquer tipo de dado em uma lista, inclusive misturando esses dados
 
 lista6 = [1, 2.34, True, 'Geek', 'd', [1, 2, 3], 7865839747]
 print(lista6)
+print(type(lista6))
+
+# Iterando sobre listas
+
+# Exemplo 1 - Utilizando for
+
+soma = 0
+for elemento in lista4:
+    print(elemento)
+    soma = soma + elemento
+print(soma)
+
+# Exemplo 2 - Utilizando while
+
+carrinho = []
+produto = ''
+
+while produto != 'sair':
+    print('Adicione um produto na lista ou digite "sair" para sair:')
+    produto = input()
+    if produto != 'sair':
+        carrinho.append(produto)
+
+for produto in carrinho:
+    print(produto)
+
+# Utilizando variáveis em listas
+numeros = [1, 2, 3, 4, 5]
+print(numeros)
+
+num1 = 1
+num2 = 2
+num3 = 3
+num4 = 4
+num5 = 5
+
+numeros = [num1, num2, num3, num4, num5]
+print(numeros)
+
+# Fazemos acesso aos elementos de forma indexada
+#           0         1        2        3
+cores = ['verde', 'amarelo', 'azul', 'branco']
+print(cores[0]) # verde
+print(cores[1]) # amarelo
+print(cores[2]) # azul
+print(cores[3]) # branco
+
+# Fazer acesso aos elementos de forma indexada inversa
+# Para entender melhor o índice negativo, devemos pensar na lista como um círculo, onde
+# o final de um elemento está ligado ao inicio da lista
+
+print(cores[-1]) # branco
+print(cores[-2]) # azul
+print(cores[-3]) # amarelo
+print(cores[-4]) # verde
+#print(cores[-5]) # ERRO, pois não existe índice "-5"
+
+for cor in cores:
+    print(cor)
+
+indice = 0
+while indice < len(cores):
+    print(cores[indice])
+    indice = indice + 1
+
+# Gerar indice em um for
+for indice, cor in enumerate(cores):
+    print(indice, cor)
+
+# Listas aceitam valores repetidos
+lista = []
+lista.append(42)
+lista.append(42)
+lista.append(33)
+lista.append(33)
+lista.append(42)
+print(lista)
+
+# Outros métodos não tão importantes mas também úteis
+
+# Encontrar o índice de um elemento na lista
+
+numeros = [5, 6, 7, 5, 8, 9, 10]
+
+# Em qual índice está o valor 6?
+print(numeros.index(6))
+
+# Em qual índice está o valor 9?
+print(numeros.index(9))
+
+# OBS: Caso não tenha esse elemento na lista, será apresentado ValueError
+# print(numeros.index(19))
+
+print(numeros.index(5)) # Retorna o índice do primeiro elemento encontrado
+
+# Podemos fazer busca dentro de um range, ou seja qual índice começar a buscar
+print(numeros.index(5, 1)) # Buscando a partir do índice "1"
+print(numeros.index(5, 2)) # Buscando a partir do índice "2"
+print(numeros.index(5, 3)) # Buscando a partir do índice "3"
+# print(numeros.index(5, 4)) # Buscando a partir do índice "4"
+# OBS: Caso não tenha esse elemento na lista, será apresentado ValueError
+
+# Podemos fazer busca dentro de um range, início/fim
+print(numeros.index(8, 3, 6)) # Buscar o índice do valor "8", entre índices "6" a "8"
+"""
+
+# Revisão de slicing
+
+# lista[inicio:fim:passo]
+# range[inicio:fim:passo]
+
+# Trabalhando com slice de listas com o parâmetro "inicio"
+
+lista = [1, 2, 3, 4]
+
+print(lista[1:]) # Iniciando no índice "1" e pegando todos os elementos restantes
