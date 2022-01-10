@@ -333,7 +333,6 @@ print(num3)
 #lista = [1, 2, 3, 4]
 #
 #num1, num2, num3 = lista
-"""
 
 # Copiando uma lista para outra (Shallow Copy e Deep Copy)
 
@@ -342,7 +341,7 @@ print(num3)
 lista = [1, 2, 3]
 print(lista)
 
-nova = lista.copy()
+nova = lista.copy() # Cópia
 
 print(nova)
 
@@ -355,4 +354,23 @@ print(nova)
 # continuam sendo totalmente independentes, ou seja, modificando uma lista, não havera 
 # alteração em outra. Isso em Python é chamado de Deep Copy (cópia profunda)
 
+"""
+
+
 # Forma 2 - Shallow Copy
+
+lista = [1, 2, 3]
+print(lista)
+
+nova = lista # Cópia
+
+print(nova)
+
+nova.append(4)
+
+print(lista)
+print(nova)
+
+# Utilizando a cópia via atribuição, copiamos os dados da lista para a nova lista, mas após realizar modificações
+# em uma das listas, essas modificações se refletem em ambas as listas.
+# Isso em Python é chamado de Shallow Copy 
