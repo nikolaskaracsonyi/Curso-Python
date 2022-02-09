@@ -200,4 +200,4 @@ s = {1, 2, 3, 4, 5, 6}
 print(sum(s)) # Soma
 print(max(s)) # Valor Máximo
 print(min(s)) # Valor Mínimo
-print(len(s)) # Tamanho
+print(len(s)) # Tamanho 
