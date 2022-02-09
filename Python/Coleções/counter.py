@@ -7,6 +7,8 @@ Counter -> Recebe um iterável como parâmetro e cria um objeto do tipo Collecti
 parecido com um dicionário, contendo como chave o elemento da lista passado como parâmetro e como valor a
 quantidade de ocorrências desse elemento.
 
+https://docs.python.org/3/library/collections.html#collections.Counter
+
 # Realizando o import
 
 from collections import Counter
